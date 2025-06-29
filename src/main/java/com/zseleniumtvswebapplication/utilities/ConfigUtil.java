@@ -1,5 +1,9 @@
 package com.zseleniumtvswebapplication.utilities;
 
-public class ConfigUtil {
+import java.util.Properties;
+
+public class ConfigUtil 
+{
+	static Properties properties;
 
 }

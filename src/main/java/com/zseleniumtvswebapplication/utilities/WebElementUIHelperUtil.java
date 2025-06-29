@@ -30,5 +30,13 @@ public class WebElementUIHelperUtil
 		waitUtil.implicitWait(driver,30);
 		element.click();
 	}
+	
+	public void implicitWaitAndEnterText(WebElement element, String input)
+	{
+		waitUtil.implicitWait(driver,30);
+		element.sendKeys(input);	
+		element.click();
+		
+	}
 
 }
