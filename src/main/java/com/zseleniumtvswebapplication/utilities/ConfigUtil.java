@@ -1,14 +1,54 @@
 package com.zseleniumtvswebapplication.utilities;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Properties;
 
 public class ConfigUtil 
 {
 	static Properties properties;
+	static String env;
+	static String browser;
+	
+	public static void loadProperties()
+	{
+		
+		
+		try 
+		{
+			properties= new Properties();
+			env=System.getProperty("env","dev");
+			browser=System.getProperty("browser","Chrome");
+			FileInputStream fileInputStream = new FileInputStream("src/main/resources/configs/"+env+".properties");
+			properties.load(fileInputStream);
+		}
+		catch (Exception e) 
+		{
+		
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static String getProperty(String key)
+	{
+		loadProperties();
+		return properties.getProperty(key);
+		
+	}
+	
+	public static String environment()
+	{
+		
+		loadProperties();
+		return env;
+	}
+	
+	public static String browser()
+	{
+		
+		loadProperties();
+		return browser;
+	}
 
 }
-/*
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
-  </properties>*/
