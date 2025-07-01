@@ -37,14 +37,14 @@ public class ConfigUtil
 		
 	}
 	
-	public static String environment()
+	public static String getEnvironment()
 	{
 		
 		loadProperties();
 		return env;
 	}
 	
-	public static String browser()
+	public static String getBrowser()
 	{
 		
 		loadProperties();
