@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Admin\AppData\Local\Temp\testng-eclipse-1036276715\testng-customsuite.xml</span>
+                    <span>C:\Users\Admin\AppData\Local\Temp\testng-eclipse-522474585\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.zseleniumtvswebapplication.testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;User1 will buy vehicle by using valid credentials.&quot;, &quot;Users will buy Vehicle&quot;)">runScenario("User1 will buy vehicle by using valid credentials.", "Users will buy Vehicle")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.zseleniumtvswebapplication.testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Book a test ride with entering the user details.&quot;, &quot;Book a Test Ride on TVS Motor Website&quot;)">runScenario("Book a test ride with entering the user details.", "Book a Test Ride on TVS Motor Website")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.zseleniumtvswebapplication.testrunner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Book a test ride with entering the user details.&quot;, &quot;Book a Test Ride on TVS Motor Website&quot;)">runScenario("Book a test ride with entering the user details.", "Book a Test Ride on TVS Motor Website")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,25 +131,64 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;User1 will buy vehicle by using valid credentials.&quot;, &quot;Users will buy Vehicle&quot;)">
-                  </a> <!-- runScenario("User1 will buy vehicle by using valid credentials.", "Users will buy Vehicle") -->
+                  <a name="runScenario(&quot;Book a test ride with entering the user details.&quot;, &quot;Book a Test Ride on TVS Motor Website&quot;)">
+                  </a> <!-- runScenario("Book a test ride with entering the user details.", "Book a Test Ride on TVS Motor Website") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("User1 will buy vehicle by using valid credentials.","Users will buy Vehicle")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;User will navigate to the TVS website&apos; and 2 other step(s) are undefined.
+                  <span class="parameters">("Book a test ride with entering the user details.","Book a Test Ride on TVS Motor Website")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;User will be navigated to Book a test ride page&apos; and 1 other step(s) are undefined.
 You can implement these steps using the snippet(s) below:
 
-@Given(&quot;User will navigate to the TVS website&quot;)
-public void user_will_navigate_to_the_tvs_website() {
+@When(&quot;User will be navigated to Book a test ride page&quot;)
+public void user_will_be_navigated_to_book_a_test_ride_page() {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@When(&quot;User Click on Buy Vehicle&quot;)
-public void user_click_on_buy_vehicle() {
+@Then(&quot;User enters the {string}&quot;)
+public void user_enters_the(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
-@Then(&quot;User will click on {string}&quot;)
-public void user_will_click_on(String string) {
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:136)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Book a test ride with entering the user details.&quot;, &quot;Book a Test Ride on TVS Motor Website&quot;)">
+                  </a> <!-- runScenario("Book a test ride with entering the user details.", "Book a Test Ride on TVS Motor Website") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Book a test ride with entering the user details.","Book a Test Ride on TVS Motor Website")</span>
+                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &apos;User will be navigated to Book a test ride page&apos; and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;User will be navigated to Book a test ride page&quot;)
+public void user_will_be_navigated_to_book_a_test_ride_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;User enters the {string}&quot;)
+public void user_enters_the(String string) {
     // Write code here that turns the phrase above into concrete actions
     throw new io.cucumber.java.PendingException();
 }
@@ -178,7 +222,7 @@ public void user_will_click_on(String string) {
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Admin\AppData\Local\Temp\testng-eclipse-1036276715\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Admin\AppData\Local\Temp\testng-eclipse-522474585\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -235,16 +279,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.zseleniumtvswebapplication.testrunner.TestRunner')
-data.setCell(0, 3, 407);
+data.setCell(0, 3, 50540);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'com.zseleniumtvswebapplication.testrunner.TestRunner')
+data.setCell(1, 3, 47694);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 407 ms</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -272,18 +320,24 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.zseleniumtvswebapplication.testrunner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@611df6e3)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@62679465)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("User1 will buy vehicle by using valid credentials.", "Users will buy Vehicle")</span>
-                <span class="method-start">2730 ms</span>
+                <span class="method-name">runScenario("Book a test ride with entering the user details.", "Book a Test Ride on TVS Motor Website")</span>
+                <span class="method-start">1618 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Book a test ride with entering the user details.", "Book a Test Ride on TVS Motor Website")</span>
+                <span class="method-start">1673 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">3179 ms</span>
+                <span class="method-start">52171 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
