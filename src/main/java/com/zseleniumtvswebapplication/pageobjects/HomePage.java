@@ -10,8 +10,8 @@ public class HomePage
 {
 	WebDriver driver;
 	
-	@FindBy(xpath=".nav-link[href='https://www.tvsmotor.com/book-online']")
-	private WebElement buyVehicle;
+	@FindBy(xpath="//a[@href='https://www.tvsmotor.com/book-a-ride']")
+	private WebElement testRide;
 	
 	public HomePage(WebDriver driver)
 	{
@@ -28,14 +28,15 @@ public class HomePage
 		this.driver = driver;
 	}
 
-	public WebElement getBuyVehicle() {
-		return buyVehicle;
+	public WebElement getTestRide() {
+		return testRide;
 	}
 
-	public void setBuyVehicle(WebElement buyVehicle) {
-		this.buyVehicle = buyVehicle;
+	public void setTestRide(WebElement testRide) {
+		this.testRide = testRide;
 	}
-	
+
+
 	
 	
 

@@ -1,13 +1,14 @@
 @BuyVehicles
-Feature: Users will buy Vehicle
+Feature:Book a Test Ride on TVS Motor Website
 
 @BuyVehicle1
-Scenario Outline: User1 will buy vehicle by using valid credentials.
-Given User will navigate to the TVS website
-When User Click on Buy Vehicle 
-Then User will click on "<Vehicle Type>"
+Scenario Outline: Book a test ride with entering the user details.
+Given User click on test ride button
+When  User will be navigated to Book a test ride page
+Then User enters the "<UserDetails>"
 
 
 Examples:
-|Vehicle Type|
-|SCOOTER     |
+|UserDetails|
+|TestUser1  |
+|TestUser2  |
