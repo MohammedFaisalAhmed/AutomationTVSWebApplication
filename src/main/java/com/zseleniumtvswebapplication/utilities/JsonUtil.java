@@ -41,7 +41,7 @@ public class JsonUtil
 	
 	public static JsonNode getUserDataFromUsers(String userDetails)
 	{
-		return getDataFromJson("src/main/resources/testdata/json/buyvehicle.json","Users" ,"UserDetails", userDetails);
+		return getDataFromJson("src/main/resources/testdata/json/testride.json","Users" ,"UserDetails", userDetails);
 		
 	}
 

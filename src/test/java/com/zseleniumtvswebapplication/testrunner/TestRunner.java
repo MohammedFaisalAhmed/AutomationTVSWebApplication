@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (
 		
-	features="src/test/resources/features/buyvehicle.feature",
+	features="src/test/resources/features/testride.feature",
 	glue= {"com.zseleniumtvswebapplication.stepdefinitions"},
 	tags="@BuyVehicles",
 	plugin= {"pretty","html:target/Cucumber-Reports.html"},

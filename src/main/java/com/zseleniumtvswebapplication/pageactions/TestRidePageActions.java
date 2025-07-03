@@ -1,6 +1,7 @@
 package com.zseleniumtvswebapplication.pageactions;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.zseleniumtvswebapplication.pageobjects.TestRidePage;
@@ -19,6 +20,14 @@ public class TestRidePageActions
 		testRidePage= new TestRidePage(driver);
 		webElementUIHelperUtil= new WebElementUIHelperUtil(driver);
 	}
+	
+	public void verifyBookATestRideWordings()
+	{
+		
+		boolean status =testRidePage.getBookATestRideWordings().isDisplayed();
+		Assert.assertTrue(status);
+	}
+	
 	
 	public void userInformation(String userDetails)
 	{
