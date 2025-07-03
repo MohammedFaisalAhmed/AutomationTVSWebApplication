@@ -10,6 +10,17 @@ public class TestRidePage
 	
 	WebDriver driver;
 	
+	@FindBy(xpath="//h1[text()='Book A Test Ride']")
+	WebElement bookATestRideWordings;
+	
+	public WebElement getBookATestRideWordings() {
+		return bookATestRideWordings;
+	}
+
+	public void setBookATestRideWordings(WebElement bookATestRideWordings) {
+		this.bookATestRideWordings = bookATestRideWordings;
+	}
+
 	@FindBy(xpath="//input[@id='name']")
     WebElement nameField;
 	
