@@ -22,7 +22,7 @@ public class ExtentManagerUtil
 		if(extentReports==null)
 		{
 		
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyymmDD_HHmmss");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
 		String timeStamp =simpleDateFormat.format(new Date());
 		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("test-output/ExtentReport_"+timeStamp+".html");
 		extentSparkReporter.config().setDocumentTitle("Automation-Report");

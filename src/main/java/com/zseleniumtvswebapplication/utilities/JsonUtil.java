@@ -2,6 +2,7 @@ package com.zseleniumtvswebapplication.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -36,8 +37,8 @@ public class JsonUtil
 			e.printStackTrace();
 		}
 		return null;
-		
 	}
+		
 	
 	public static JsonNode getUserDataFromUsers(String userDetails)
 	{
