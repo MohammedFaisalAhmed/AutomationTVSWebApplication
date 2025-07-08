@@ -17,12 +17,21 @@ public void user_will_be_navigated_to_book_a_test_ride_page()
 }
 
 
-@Then("User enters the {string}")
-public void user_enters_the(String userDetails) 
+@Then("User enters the {string} and {string}")
+public void user_enters_the_and(String userDetails, String testRideVehicleModelName) 
 {
-testRidePageActions.userInformation(userDetails);
+testRidePageActions.userInformation(userDetails, testRideVehicleModelName);
 
 }
+
+
+
+/*@Then("User enters {string}")
+public void user_enters(String testRideVehicleModelName) 
+{
+   testRidePageActions.selectTestRideVehicle(testRideVehicleModelName);
+    
+}*/
 }
 
 

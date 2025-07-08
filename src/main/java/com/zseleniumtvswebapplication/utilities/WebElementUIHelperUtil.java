@@ -18,7 +18,7 @@ public class WebElementUIHelperUtil
 	
 	public void clickWithImplicitWait(WebElement element)
 	{
-		waitUtil.implicitWait(driver, 20);
+		waitUtil.implicitWait(driver, 50);
 		element.click();
 	}
 	
@@ -38,5 +38,13 @@ public class WebElementUIHelperUtil
 		element.click();
 		
 	}
+	
+	public void clickElementWithJS(WebElement element) 
+	{
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", element);
+	    js.executeScript("arguments[0].click();", element);
+	}
+
 
 }

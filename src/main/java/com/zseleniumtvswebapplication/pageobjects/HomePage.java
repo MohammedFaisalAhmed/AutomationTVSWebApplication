@@ -20,24 +20,30 @@ public class HomePage
 		PageFactory.initElements(driver, this);
 	}
 
-	public WebDriver getDriver() {
+	public WebDriver getDriver() 
+	{
 		return driver;
 	}
 
-	public void setDriver(WebDriver driver) {
+	public void setDriver(WebDriver driver)
+	{
 		this.driver = driver;
 	}
 
-	public WebElement getTestRide() {
+	public WebElement getTestRide() 
+	{
 		return testRide;
 	}
 
-	public void setTestRide(WebElement testRide) {
+	public void setTestRide(WebElement testRide)
+	{
 		this.testRide = testRide;
 	}
-
-
-	
-	
-
 }
+
+
+
+	
+	
+
+
