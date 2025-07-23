@@ -30,6 +30,7 @@ public class TestRidePageActions
 	
 	
 	public void userInformation(String userDetails, String testRideVehicleModelName)
+	                           // userDetails and testRideVehicleModelName is testride.feature Examples Heading
 	{
 		JsonNode userData=JsonUtil.getUserDataFromUsers(userDetails);
 		
@@ -41,8 +42,8 @@ public class TestRidePageActions
 		webElementUIHelperUtil.implicitWaitAndEnterText(testRidePage.getOtpField(), otp);
 		
 		webElementUIHelperUtil.clickWithImplicitWait(testRidePage.getVehicleField());
-		webElementUIHelperUtil.clickWithImplicitWait(testRidePage.getVehicleVariant());
-		webElementUIHelperUtil.clickElementWithJS(testRidePage.getvehicleVariantModelSelectionDropDown(testRideVehicleModelName));
+		webElementUIHelperUtil.clickWithImplicitWait(testRidePage.getAllVehiclesList());
+		webElementUIHelperUtil.clickElementWithJS(testRidePage.getvehicleFromAllVehiclesList(testRideVehicleModelName));
 		
 		
 		webElementUIHelperUtil.clickWithImplicitWait(testRidePage.getCheckBoxInterestedInFinance());

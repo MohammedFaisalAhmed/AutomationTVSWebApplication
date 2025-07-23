@@ -19,6 +19,7 @@ public void user_will_be_navigated_to_book_a_test_ride_page()
 
 @Then("User enters the {string} and {string}")
 public void user_enters_the_and(String userDetails, String testRideVehicleModelName) 
+                              //// userDetails and testRideVehicleModelName is testride.feature Examples Heading
 {
 testRidePageActions.userInformation(userDetails, testRideVehicleModelName);
 
