@@ -34,7 +34,7 @@ public class TestRidePage
 	WebElement vehicleField;
 	
 	@FindBy(xpath="//div[@class='vehicleSelectBoxListing mCustomScrollbar _mCS_1']")
-	WebElement vehicleVariant;
+	WebElement allVehiclesList;
 	
 	@FindBy(xpath="//input[@name='interestFinance']/following-sibling::span")
 	WebElement checkBoxInterestedInFinance;
@@ -107,12 +107,14 @@ public class TestRidePage
 		this.vehicleField = vehicleField;
 	}
 
-	public WebElement getVehicleVariant() {
-		return vehicleVariant;
+	
+
+	public WebElement getAllVehiclesList() {
+		return allVehiclesList;
 	}
 
-	public void setVehicleVariant(WebElement vehicleVariant) {
-		this.vehicleVariant = vehicleVariant;
+	public void setAllVehiclesList(WebElement allVehiclesList) {
+		this.allVehiclesList = allVehiclesList;
 	}
 
 	public WebDriver getDriver() {
@@ -139,14 +141,33 @@ public class TestRidePage
 		this.phoneNumberField = phoneNumberField;
 	}
 	
-	public WebElement getvehicleVariantModelSelectionDropDown(String testRideModelName)
+	public WebElement getvehicleFromAllVehiclesList(String testRideVehicleModelName)
+	                                              //
 	{
 		
 	//  By vehicleVariantLocator= By.xpath("//a[@data-vehiclename="+testRideModelName+"]");
-		By vehicleVariantLocator= By.xpath("//a[@data-vehiclename='" + testRideModelName + "']");
+		By vehicleVariantLocator= By.xpath("//a[@data-vehiclename='"+ testRideVehicleModelName + "']");
 	//	waitUtil.explicitWait(driver, 30, ExpectedConditions.elementToBeClickable(vehicleVariantLocator));
 		return driver.findElement(vehicleVariantLocator);
 		
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

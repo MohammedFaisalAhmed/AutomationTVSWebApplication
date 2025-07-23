@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 		
 	features="src/test/resources/features/testride.feature",
 	glue= {"com.zseleniumtvswebapplication.stepdefinitions"},
-	tags="@BuyVehicles",
+	tags="@TestRideVehicle",
 	plugin= {"pretty","html:target/Cucumber-Reports.html"},
 	monochrome =true
 		
