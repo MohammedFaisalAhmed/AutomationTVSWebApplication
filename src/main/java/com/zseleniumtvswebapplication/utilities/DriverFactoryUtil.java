@@ -30,7 +30,7 @@ public class DriverFactoryUtil
 			}
 			case "Firefox":
 			{
-				driver.set(new FirefoxDriver());
+				driver.set(new FirefoxDriver());//Added Firefox Driver
 				break;
 			}
 			case "Safari":
