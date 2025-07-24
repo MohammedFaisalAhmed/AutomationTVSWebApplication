@@ -19,7 +19,8 @@ public class DriverFactoryUtil
 			{
 			case "Chrome":
 			{
-				driver.set(new ChromeDriver());
+				driver.set(new ChromeDriver());//Added chrome Driver
+
 				break;
 			}
 			case "Edge":
