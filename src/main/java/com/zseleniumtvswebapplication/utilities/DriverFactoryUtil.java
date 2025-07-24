@@ -24,7 +24,7 @@ public class DriverFactoryUtil
 			}
 			case "Edge":
 			{
-				driver.set(new EdgeDriver());
+				driver.set(new EdgeDriver());//Added Edge Driver
 				break;
 			}
 			case "Firefox":
