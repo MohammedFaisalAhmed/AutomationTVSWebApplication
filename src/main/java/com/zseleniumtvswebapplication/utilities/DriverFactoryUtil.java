@@ -34,7 +34,7 @@ public class DriverFactoryUtil
 			}
 			case "Safari":
 			{
-				driver.set(new SafariDriver());
+				driver.set(new SafariDriver()); //Added safari browser
 				break;
 			}
 			
