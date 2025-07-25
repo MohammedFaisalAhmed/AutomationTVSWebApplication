@@ -40,7 +40,7 @@ public class DriverFactoryUtil
 			}
 			
 			default: 
-				throw new RuntimeException("no browser");
+				throw new RuntimeException("no browser");// default
 			
 			}
 			
