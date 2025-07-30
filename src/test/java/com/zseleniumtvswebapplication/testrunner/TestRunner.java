@@ -10,15 +10,14 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (
 		
-	features="src/test/resources/features/testride.feature",
+	features={"src/test/resources/features/testride.feature" ,"src/test/resources/features/selectCountry.feature"},
 	glue= {"com.zseleniumtvswebapplication.stepdefinitions"},
-	tags="@TestRideVehicle",
+	tags="@TestRideVehicle or @SelectCountry",
 	plugin= {"pretty","html:target/Cucumber-Reports.html"},
+	dryRun=false,
 	monochrome =true
 		
 		)
-
-
 
 
 public class TestRunner extends AbstractTestNGCucumberTests
