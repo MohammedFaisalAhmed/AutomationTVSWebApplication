@@ -42,7 +42,30 @@ public class TestRidePage
 	@FindBy(id="submitTestRide")
 	WebElement submitButton;
 	
+	@FindBy(xpath="//li[@class='dropdown']/a[text()='About Us']")
+	WebElement aboutUsMenu;
 	
+	@FindBy(xpath="//li[@class='dropdown open']/ul/li/a[text()='Overview']")
+	WebElement overviewSection;
+	
+	public WebElement getOverviewSection() {
+		return overviewSection;
+	}
+
+	public void setOverviewSection(WebElement overviewSection) {
+		this.overviewSection = overviewSection;
+	}
+
+	public WebElement getOverViewWords() {
+		return overViewWords;
+	}
+
+	public void setOverViewWords(WebElement overViewWords) {
+		this.overViewWords = overViewWords;
+	}
+
+	@FindBy(xpath="//div[@class='layoutWrap']/ol/li[text()='Overview']")
+	WebElement overViewWords;
 	
     public WebElement getCheckBoxInterestedInFinance() {
 		return checkBoxInterestedInFinance;
@@ -127,6 +150,14 @@ public class TestRidePage
 
 	public WebElement getNameField() {
 		return nameField;
+	}
+
+	public WebElement getAboutUsMenu() {
+		return aboutUsMenu;
+	}
+
+	public void setAboutUsMenu(WebElement aboutUsMenu) {
+		this.aboutUsMenu = aboutUsMenu;
 	}
 
 	public void setNameField(WebElement nameField) {

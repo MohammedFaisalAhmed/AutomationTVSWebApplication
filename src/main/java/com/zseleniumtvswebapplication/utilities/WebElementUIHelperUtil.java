@@ -3,6 +3,8 @@ package com.zseleniumtvswebapplication.utilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class WebElementUIHelperUtil 
 {
@@ -46,5 +48,39 @@ public class WebElementUIHelperUtil
 	    js.executeScript("arguments[0].click();", element);
 	}
 
-
+	public void scrollUpImplicitWaitClick(WebElement element)
+	{
+		
+		JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
+		javascriptExecutor.executeScript("window.scrollBy(0,-500)");
+		waitUtil.implicitWait(driver,30);
+		element.click();
+	}
+	
+	public WebElement listVisbilityWithExplicitWait(WebElement element)
+	{
+		
+		
+		waitUtil.explicitWait(driver,30, ExpectedConditions.visibilityOf(element));
+		return element;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

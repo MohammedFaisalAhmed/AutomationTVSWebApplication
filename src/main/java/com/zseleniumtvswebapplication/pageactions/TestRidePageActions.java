@@ -26,6 +26,7 @@ public class TestRidePageActions
 		
 		boolean status =testRidePage.getBookATestRideWordings().isDisplayed();
 		Assert.assertTrue(status);
+		System.out.println(status);
 	}
 	
 	
@@ -58,6 +59,25 @@ public class TestRidePageActions
 		//webElementUIHelperUtil.clickWithImplicitWait(testRidePage.getvehicleVariantModelSelectionDropDown(testRideVehicleModelName));
 		webElementUIHelperUtil.clickElementWithJS(testRidePage.getvehicleVariantModelSelectionDropDown(testRideVehicleModelName));
 }*/
+	
+	public void clickAboutUsMenu()
+	{
+		
+		webElementUIHelperUtil.scrollUpImplicitWaitClick(testRidePage.getAboutUsMenu());
+
+	}
+	
+	public void clickOverviewSection()
+	{
+		webElementUIHelperUtil.clickWithImplicitWait(testRidePage.getOverviewSection());
+	}
+	
+	public void verifyOverviewWords()
+	{
+		
+		boolean status=testRidePage.getOverViewWords().isDisplayed();
+		Assert.assertTrue(status);
+	}
 	
 	
 }
