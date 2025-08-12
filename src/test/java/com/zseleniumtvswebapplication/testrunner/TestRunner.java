@@ -9,10 +9,11 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
 (
-		
-	features={"src/test/resources/features/testride.feature" ,"src/test/resources/features/selectCountry.feature"},
+	features="src/test/resources/features/selectCountry.feature",	
+	//features={"src/test/resources/features/testride.feature" ,"src/test/resources/features/selectCountry.feature"},
 	glue= {"com.zseleniumtvswebapplication.stepdefinitions"},
-	tags="@TestRideVehicle or @SelectCountry",
+	tags="@SelectState",
+	//tags="@TestRideVehicle or @SelectCountryAndGoToAppsDownload",
 	plugin= {"pretty","html:target/Cucumber-Reports.html"},
 	dryRun=false,
 	monochrome =true
