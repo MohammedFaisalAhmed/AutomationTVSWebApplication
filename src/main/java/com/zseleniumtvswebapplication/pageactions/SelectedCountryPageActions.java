@@ -21,8 +21,9 @@ public class SelectedCountryPageActions
 	public void verifyKuwaitCountrySelected()
 	{
 		
-		boolean status= selectedCountryPage.getKuwaitCountry().isDisplayed();
-		Assert.assertTrue(status);
+		webElementUIHelperUtil.assertPresenceOfElement(selectedCountryPage.getKuwaitCountry());
+		//boolean status= selectedCountryPage.getKuwaitCountry().isDisplayed();
+		//Assert.assertTrue(status);
 		//System.out.println(status);
 	}
 

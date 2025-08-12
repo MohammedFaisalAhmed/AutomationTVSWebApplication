@@ -52,5 +52,43 @@ public class HomePageActions
 	   webElementUIHelperUtil.scrollDownImplicitWaitClick(homePage.getCountryFromCountryList(country));
 	   
    }
-
+   
+   public void clickTvsConnectAppAndroidGooglePlayButton()
+   {
+	
+	   webElementUIHelperUtil.clickElementWithJS(homePage.getTvsConnectAppAndroidGooglePlayButton());
+   
+   }
+   
+   public void clickRoadSideAssistanceNumber()
+   {
+	   
+	   webElementUIHelperUtil.clickElementWithJS(homePage.getRoadSideAssistanceNumber());
+	   webElementUIHelperUtil.acceptAlert();
+   }
+   
+/*public void clickUserLoginIcon()
+{
+	webElementUIHelperUtil.switchBackToMainWindow();
+	webElementUIHelperUtil.clickWithImplicitWait(homePage.getUserLoginIcon());
+}*/
+   
+   public void selectState()
+   {
+	   
+	
+	   webElementUIHelperUtil.selectByVisibleText(homePage.getAllTheStates(), "Karnataka");
+	
+   }
+   
 }
+
+
+
+
+
+
+
+
+
+
