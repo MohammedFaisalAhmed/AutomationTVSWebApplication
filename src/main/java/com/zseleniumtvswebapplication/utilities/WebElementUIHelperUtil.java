@@ -126,9 +126,35 @@ public class WebElementUIHelperUtil
 			dropDown.selectByVisibleText(input);
 		}
 		
+		public void selectByIndex(WebElement element,int index)
+		{
+			JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
+			javascriptExecutor.executeScript("window.scollBy(0,500)");
+			Select dropdown = new Select(element);
+			dropdown.selectByIndex(index);
+		}
+		
+		public void selectByValue(WebElement element,String input)
+		{
+			JavascriptExecutor javascriptExecutor= (JavascriptExecutor)driver;
+			javascriptExecutor.executeScript("window.scollBy(0,500)");
+			Select dropdown = new Select(element);
+			dropdown.selectByValue(input);
+		}
+		
+		public void deSelectByVisibleText(WebElement element, String input)
+		{
+			JavascriptExecutor javascriptExecutor=(JavascriptExecutor)driver;
+			javascriptExecutor.executeScript("window.scrollBy(0,500)");
+			Select dropDown = new Select(element);
+			dropDown.deselectByVisibleText(input);
+		}
+		
+		
+
 		public void switchFrameByIndex(int index)
 		{
-			
+		
 			driver.switchTo().frame(index);
 		}
 		
@@ -173,21 +199,3 @@ public class WebElementUIHelperUtil
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
